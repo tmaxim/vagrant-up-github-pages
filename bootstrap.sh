@@ -6,8 +6,8 @@
 # It accompanies the article which can be found here:
 # http://kappataumu.com/articles/vagrant-jekyll-github-pages-streamlined-content-creation.html
 
-CLONEREPO='XXX'
-CLONEDIR="/srv/www/$(basename $CLONEREPO)"
+# CLONEREPO='XXX'
+# CLONEDIR="/srv/www/$(basename $CLONEREPO)"
 
 start_seconds="$(date +%s)"
 echo "Welcome to the initialization script."
@@ -93,12 +93,12 @@ fi
 
 # Time to pull the repo. If the directory is there, we do nothing,
 # since git should be used to push/pull commits instead.
-if [[ ! -d "$CLONEDIR" ]]; then
-    git clone "$CLONEREPO" "$CLONEDIR"
-fi
+# if [[ ! -d "$CLONEDIR" ]]; then
+#     git clone "$CLONEREPO" "$CLONEDIR"
+# fi
 
 # Now, for the Jekyll part
-jekyll serve --source "$CLONEDIR" --detach
+# jekyll serve --source "$CLONEDIR" --detach
 
 end_seconds="$(date +%s)"
 echo "-----------------------------"
